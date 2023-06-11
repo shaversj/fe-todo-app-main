@@ -15,6 +15,7 @@ const Todo = ({ todo, handleCompleteClick, handleDeleteClick }) => {
         checked={todo.isComplete}
         onChange={handleCompleteClick}
         value={todo.title}
+        title={"Toggle Todo Complete"}
       />
       {todo.isComplete ? (
         <>
@@ -30,6 +31,7 @@ const Todo = ({ todo, handleCompleteClick, handleDeleteClick }) => {
         className={"ml-auto pr-4"}
         onClick={handleDeleteClick}
         id={todo.id}
+        title={"Delete Todo"}
       >
         <img className={"h-[13px] w-[13px] lg:hidden"} src={cross} alt={""} />
       </button>

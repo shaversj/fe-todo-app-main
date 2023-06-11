@@ -26,6 +26,7 @@ const TodoForm = ({ handleAddTodoClick }) => {
       <form ref={formRef}>
         <input
           type={"checkbox"}
+          title={"Add Todo"}
           onChange={handleCheckboxChange}
           className={
             "ml-2 h-[20px] w-[20px] rounded-full border-light-light-grayish-blue checked:text-purple-400 active:bg-purple-400 dark:border-dark-very-dark-grayish-blue dark:bg-dark-very-dark-desaturated-blue lg:ml-6 lg:h-[24px] lg:w-[24px]"
