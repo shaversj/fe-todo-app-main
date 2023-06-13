@@ -11,11 +11,10 @@ const Todo = ({ todo, handleCompleteClick, handleDeleteClick }) => {
           "ml-2 h-[20px] w-[20px] rounded-full border-light-light-grayish-blue checked:bg-purple-400 checked:text-purple-400 focus:ring-0 dark:border-dark-very-dark-grayish-blue dark:bg-dark-very-dark-desaturated-blue lg:ml-6 lg:h-[24px] lg:w-[24px]"
         }
         type={"checkbox"}
-        id={todo.id}
         checked={todo.isComplete}
         onChange={handleCompleteClick}
         value={todo.title}
-        title={"Toggle Todo Complete"}
+        title={"Toggle Complete" + todo.title}
       />
       {todo.isComplete ? (
         <>

@@ -1,6 +1,18 @@
 import moon from "../assets/images/icon-moon.svg";
+import sun from "../assets/images/icon-sun.svg";
+import { useState } from "react";
 
 const TodoHeader = () => {
+  const [darkTheme, setDarkTheme] = useState(false);
+
+  function handleThemeClick() {
+    setDarkTheme(!darkTheme);
+  }
+
+  darkTheme
+    ? document.documentElement.classList.add("dark")
+    : document.documentElement.classList.remove("dark");
+
   return (
     <div
       className={
@@ -9,11 +21,17 @@ const TodoHeader = () => {
     >
       <h1 className={""}>TODO</h1>
 
-      <img
-        className={"ml-auto flex h-7 pb-2 lg:h-[34px] "}
-        src={moon}
-        alt={""}
-      />
+      <button
+        onClick={handleThemeClick}
+        className={"ml-auto"}
+        title={"Theme Toggle Button"}
+      >
+        {darkTheme ? (
+          <img className={" h-7 pb-2 lg:h-[34px] "} src={moon} alt={""} />
+        ) : (
+          <img className={" h-7 pb-2 lg:h-[34px] "} src={sun} alt={""} />
+        )}
+      </button>
     </div>
   );
 };
