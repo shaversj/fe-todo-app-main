@@ -3,7 +3,7 @@ const Todo = ({ todo, handleCompleteClick, handleDeleteClick }) => {
   return (
     <div
       className={
-        "box-border flex h-[52px] w-[326px] items-center border-t bg-white font-josefinSans text-[12px] text-light-very-dark-grayish-blue drop-shadow-lg first:rounded-t-md dark:border-t-dark-very-dark-grayish-blue dark:bg-dark-very-dark-desaturated-blue dark:text-dark-light-grayish-blue lg:h-[63px] lg:w-[538px] lg:text-[16px]"
+        "box-border flex h-[52px] w-[326px] items-center border-t bg-white font-josefinSans text-[12px] text-light-very-dark-grayish-blue shadow-lg first:rounded-t-md dark:border-t-dark-very-dark-grayish-blue dark:bg-dark-very-dark-desaturated-blue dark:text-dark-light-grayish-blue lg:h-[63px] lg:w-[538px] lg:text-[16px]"
       }
     >
       <input

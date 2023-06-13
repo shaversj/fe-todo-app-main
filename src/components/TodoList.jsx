@@ -55,7 +55,7 @@ const TodoList = ({
       </div>
       <div
         className={
-          "mt-6 flex h-[52px] w-[326px] items-center justify-center gap-4 rounded-lg bg-white font-josefinSans drop-shadow-lg dark:border-t-dark-very-dark-grayish-blue dark:bg-dark-very-dark-desaturated-blue dark:text-dark-light-grayish-blue lg:invisible lg:h-[50px] lg:w-[538px] lg:text-[14px]"
+          "mt-6 flex h-[52px] w-[326px] items-center justify-center gap-4 rounded-lg bg-white font-josefinSans shadow-lg dark:border-t-dark-very-dark-grayish-blue dark:bg-dark-very-dark-desaturated-blue dark:text-dark-light-grayish-blue lg:invisible lg:h-[50px] lg:w-[538px] lg:text-[14px]"
         }
       >
         <TodoFilter filter={filter} setFilter={setFilter} />
