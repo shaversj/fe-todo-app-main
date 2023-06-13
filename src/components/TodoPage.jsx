@@ -66,9 +66,8 @@ const TodoPage = () => {
             handleDeleteClick={handleDeleteClick}
             handleClearCompleted={handleClearCompleted}
             filter={filter}
-          >
-            <TodoFilter filter={filter} setFilter={setFilter} />
-          </TodoList>
+            setFilter={setFilter}
+          />
         </div>
       </div>
     </div>

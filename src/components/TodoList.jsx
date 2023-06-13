@@ -1,6 +1,5 @@
 import Todo from "./Todo.jsx";
-import { useState } from "react";
-import FilterButton from "./FilterButton.jsx";
+import TodoFilter from "./TodoFilter.jsx";
 
 const FILTER_MAP = {
   All: () => true,
@@ -16,6 +15,7 @@ const TodoList = ({
   handleDeleteClick,
   handleClearCompleted,
   filter,
+  setFilter,
   children,
 }) => {
   const todoNotCompleted = todoList.filter(
@@ -42,14 +42,23 @@ const TodoList = ({
       >
         <div className={"sm:flex lg:grid lg:grid-cols-3 "}>
           <span> {todoNotCompleted} items left</span>
+          <div className={"invisible gap-5 lg:visible lg:flex"}>
+            <TodoFilter filter={filter} setFilter={setFilter} />
+          </div>
           <button
             className={"sm:ml-auto lg:col-start-3"}
             onClick={handleClearCompleted}
           >
             <span>Clear Completed</span>
           </button>
-          {children}
         </div>
+      </div>
+      <div
+        className={
+          "mt-6 flex h-[52px] w-[326px] items-center justify-center gap-4 rounded-lg bg-white font-josefinSans drop-shadow-lg dark:border-t-dark-very-dark-grayish-blue dark:bg-dark-very-dark-desaturated-blue dark:text-dark-light-grayish-blue lg:invisible lg:h-[50px] lg:w-[538px] lg:text-[14px]"
+        }
+      >
+        <TodoFilter filter={filter} setFilter={setFilter} />
       </div>
     </div>
   );
